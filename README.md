@@ -38,8 +38,33 @@ T = 0.01
 V = 0.0 
 Gamma = 0.5
 n = 2 
-Coupling =[200]
+C =[200]
 m_max = 50
 m = 1000 
 E_to_scan = [10]
+```
+
+After setting all our parameters, we now create the class which will contain both our external electric field and central electronic system
+
+```javascript
+H = Electrons(n, Hamiltonian, V, T);  
+E = E_field( -E_to_scan[0], -E_to_scan[-1], E_to_scan, Gamma, C/2, C/2)
+```
+
+Our next step is to set up the simulation and determine the current for a range of different frequencies for the external electric field. 
+To do so, we use the function `.coupling2` 
+
+```javascript
+current = coupling2(E, Hamiltonian, m, m_max) 
+```
+We can plot the results of the current to visualise the current for a variety of different frequcies
+
+```javascript
+plt.plot(E_to_scan, current[0], linestyle="-", linewidth=1, marker = "o", markersize = 0)
+plt.ylabel("Normalised Current")
+plt.xlabel(" Applied Bias accross Leads [t]")
+plt.grid("on")
+plt.legend(loc='upper left', bbox_to_anchor=(1, 1))
+plt.style.use('ggplot')
+plt.show()
 ```
