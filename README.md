@@ -1,13 +1,21 @@
 # FLOW-K
-Final Year Physics project which investigates transport properties of devices subject to an external electromagnetic field
+
+### Please note that this project is still underdevelopment and will be updated on a regular basis.
+
+Here we provide a package which calculates the transport properties of a N dimensional device subject to an external electromagnetic field. 
+Using a model developed by Martinez et. al. (see INSERT), a recursive scheme was implemented to calculate the current flowing through an electronic device subject to an electric field when attached to electron resoirvoirs. 
+
+This project was developed as part of a Theoretical Physics Final Year Project at Trinity College Dublin. 
 
 ## Features
+- Measure the current flowing throughout an electronic device when attached to two electron resoirvoirs
+- Investigate transport properties of an electronic device when an external potential is applied
+- Determine how current flow through various systems, such as DNA wires is effected by an external potential
 
 ## Upcoming Updates
 - Tutorial for Quantum Ratchets
 - Tutorial for DNA Wire
 - Package code such that its easy to download and install
--
 
 ## Tutorial: Double Quantum Dot
 
