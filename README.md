@@ -1,10 +1,15 @@
 # FLOW-K
 Final Year Physics project which investigates transport properties of devices subject to an external electromagnetic field
 
+## Features
+
+## Upcoming Updates
+- Tutorial for Quantum Ratchets
+- Tutorial for DNA Wire
+- Package code such that its easy to download and install
+-
 
 ## Tutorial: Double Quantum Dot
-
-## Initialization 
 
 First we import in the functions and packages required.
 
