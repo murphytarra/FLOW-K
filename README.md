@@ -26,13 +26,9 @@ from FLOW_K import E_field as E_field
 from FLOW_K import Electrons as Electrics
 ```
 
-Our first step is to define the dimensionality and Hamiltonian of the system we wish to investigate. In this example we will use a double Quantum Dot. The Hamiltonian of the double quantum dot under investigation is given as 
+Our first step is to define the dimensionality and Hamiltonian of the system we wish to investigate. In this example we will use a double Quantum Dot. For this example we normalise all parameters to the hopping parameter in our Hamiltonian and set the onsite energies of the quantum dots to 5. 
 
-INSERT
-
-This is the first parameter we define in our code;
-
-\[ H = 2\frac{1}{2}\]
+Using these parameters, the Hamiltonian of the double quantum dot under investigation is given as 
 
 ```javascript
 n = 2
