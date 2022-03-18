@@ -1,9 +1,9 @@
 # FLOW-K
 
-### Please note that this project is still underdevelopment and will be updated on a regular basis.
+### Please note that this project is still under development and will be updated on a regular basis.
 
 Here we provide a package which calculates the transport properties of a N dimensional device subject to an external electromagnetic field. 
-Using a model developed by Martinez et. al. (see INSERT), a recursive scheme was implemented to calculate the current flowing through an electronic device subject to an electric field when attached to electron resoirvoirs. 
+Using a model developed by Martinez et. al. (see https://journals.aps.org/prb/abstract/10.1103/PhysRevB.77.075339), a recursive scheme was implemented to calculate the current flowing through an electronic device subject to an electric field when attached to electron resoirvoirs. 
 
 This project was developed as part of a Theoretical Physics Final Year Project at Trinity College Dublin. 
 
@@ -12,7 +12,7 @@ This project was developed as part of a Theoretical Physics Final Year Project a
 - Investigate transport properties of an electronic device when an external potential is applied
 - Determine how current flow through various systems, such as DNA wires is effected by an external potential
 
-## Upcoming Updates
+## Future Updates
 - Tutorial for Quantum Ratchets
 - Tutorial for DNA Wire
 - Package code such that its easy to download and install
@@ -26,9 +26,17 @@ from FLOW_K import E_field as E_field
 from FLOW_K import Electrons as Electrics
 ```
 
-Our first step is to define the dimensionality and Hamiltonian of the system we wish to investigate. In this example we will use a double Quantum Dot;
+Our first step is to define the dimensionality and Hamiltonian of the system we wish to investigate. In this example we will use a double Quantum Dot. The Hamiltonian of the double quantum dot under investigation is given as 
+
+INSERT
+
+This is the first parameter we define in our code;
+\begin{equation}
+  H = \frac{2}{7}
+\end{equation}
 
 ```javascript
+n = 2
 Hamiltonian = [[-5, 1], [1, 5]]
 ```
 
@@ -37,7 +45,7 @@ We normalise all other parameters with regards to the hopping parameter $t$ set 
 
 | Name      | Symbol   | Value  |
 | :------------- | :----------: | -----------: |
-|  Boltzmann Temperature | kT  | 0.25   |
+|  Boltzmann Temperature | kT  | 0.01  |
 |  Applied Bias | V   | 0   |
 |  Self Energy (Leads) | Gamma   | 0.5|
 |  Frequency Range of Efield | E_to_scan   | -40 - 0.1   |
@@ -50,11 +58,10 @@ We normalise all other parameters with regards to the hopping parameter $t$ set 
 T = 0.01 
 V = 0.0 
 Gamma = 0.5
-n = 2 
-C =[200]
-m_max = 50
-m = 1000 
-E_to_scan = [10]
+C =[6]
+m_max = 10
+m = 20 
+E_to_scan = np.linspace(-40, 0.1, m)
 ```
 
 After setting all our parameters, we now create the class which will contain both our external electric field and central electronic system
