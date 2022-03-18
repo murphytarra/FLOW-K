@@ -31,9 +31,8 @@ Our first step is to define the dimensionality and Hamiltonian of the system we 
 INSERT
 
 This is the first parameter we define in our code;
-\begin{equation}
-  H = \frac{2}{7}
-\end{equation}
+
+\[ H = 2\frac{1}{2}\]
 
 ```javascript
 n = 2
